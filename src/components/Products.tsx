@@ -46,12 +46,22 @@ const Products = () => {
                     >  
                     <div key={product.id}>
                         <h2>{product.title}</h2>
-                        <h3>{product.price}€</h3>
+                        <h3>Description: </h3>
                         <p>{product.description}</p>
+                        <h3>Price:</h3>
+                        <p>{product.price} €</p>
+                        <h3>Category:</h3>
                         <p>{product.category}</p>
-                        <img src={product.image} alt="" />
+                        <h3>Rating:</h3>
                         <p>{product.rating.rate}</p>
-                        <p>Rated {product.rating.count} times.</p>
+                        <h3>Reviews:</h3>
+                        <p>{product.rating.count} reviews</p>
+                        <h3>Image:</h3>
+                        <img
+                            style={{ objectFit: "contain", height: "300px" }}
+                            src={product.image}
+                            alt={product.title}
+                        />
                     </div>
                 </Card>
             ))}
